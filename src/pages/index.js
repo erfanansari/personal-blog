@@ -46,7 +46,7 @@ const BlogIndex = ({ data, location }) => {
                   </h2>
                   <small>{post.frontmatter.date}</small>
                   {' • '}
-                  <small>{post.timeToRead} min.</small>
+                  <small>{post.timeToRead} min</small>
                 </header>
                 <section>
                   <p
