@@ -17,19 +17,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         ) {
           nodes {
             id
+            timeToRead
             fields {
               slug
             }
           }
         }
       }
-    `
+    `,
   )
 
   if (result.errors) {
     reporter.panicOnBuild(
       `There was an error loading your blog posts`,
-      result.errors
+      result.errors,
     )
     return
   }
@@ -95,6 +96,8 @@ exports.createSchemaCustomization = ({ actions }) => {
 
     type Social {
       twitter: String
+      github: String
+      telegram: String
     }
 
     type MarkdownRemark implements Node {

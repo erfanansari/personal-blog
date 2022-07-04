@@ -1,4 +1,15 @@
 {
   "arrowParens": "avoid",
-  "semi": false
+  "semi": false,
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useEditorConfig": false,
+  "requireConfig": true,
+  "singleQuote": true,
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "proseWrap": "always",
+  "quoteProps": "consistent",
+  "trailingComma": "all"
 }
