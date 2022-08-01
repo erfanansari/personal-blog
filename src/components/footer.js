@@ -9,20 +9,22 @@ const Footer = () => {
           social {
             github
             telegram
+            website
           }
         }
       }
     }
   `)
 
-  const github = data.site.siteMetadata?.social?.github
-  const telegram = data.site.siteMetadata?.social?.telegram
+  const { github, telegram, website } = data.site.siteMetadata?.social
 
   return (
     <footer>
       © {new Date().getFullYear()},{` `}
       All rights reserved.
       <div>
+        <a href={website}>website</a>
+        {' • '}
         <a
           href={`https://github.com/${github || ``}`}
           target="_blank"

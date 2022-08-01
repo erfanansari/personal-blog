@@ -11,6 +11,7 @@ module.exports = {
       twitter: `eansarimehr`,
       github: `erfanansari`,
       telegram: `eansarimehr`,
+      website: `https://erfanansari.me`,
     },
   },
   plugins: [
