@@ -20,8 +20,10 @@ const Footer = () => {
 
   return (
     <footer>
-      © {new Date().getFullYear()},{` `}
-      All rights reserved.
+      <p>
+        © {new Date().getFullYear()},{` `}
+        All rights reserved.
+      </p>
       <div>
         <a href={website}>website</a>
         {' • '}
