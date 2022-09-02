@@ -373,7 +373,7 @@ a:focus {
     list-style-position: inside;
   }
 }
-
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --color-primary: #2ac3de;
@@ -388,11 +388,11 @@ a:focus {
   pre[class*='language-'] {
     filter: invert(1);
   }
-}
-
+} */
+/*
 @media (prefers-color-scheme: light) {
   :not(pre) > code[class*='language-'],
   pre[class*='language-'] {
     filter: invert(0);
   }
-}
+} */
