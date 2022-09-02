@@ -26,6 +26,8 @@ const colors = {
   },
 }
 
+const isBrowser = typeof window !== 'undefined'
+
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
@@ -39,7 +41,7 @@ const Layout = ({ location, title, children }) => {
       {title}
     </Link>
   )
-  const selectedTheme = localStorage.getItem('theme')
+  const selectedTheme = isBrowser && localStorage.getItem('theme')
   const isOSThemeDark = () =>
     window.matchMedia('(prefers-color-scheme: dark)').matches
   const [dark, setDark] = useState(
@@ -70,7 +72,7 @@ const Layout = ({ location, title, children }) => {
         id="change-theme"
         onClick={() => {
           setDark(!dark)
-          localStorage.setItem('theme', dark ? 'light' : 'dark')
+          if (isBrowser) localStorage.setItem('theme', dark ? 'light' : 'dark')
         }}
         aria-label={`Active ${dark ? 'light' : 'dark'} mode`}
         title={`Active ${dark ? 'light' : 'dark'} mode`}
