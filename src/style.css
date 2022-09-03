@@ -396,9 +396,8 @@ a:focus {
   }
 }
 
-/*
 @media (prefers-color-scheme: dark) {
-  :root.dark {
+  :root {
     --color-primary: #2ac3de;
     --color-text: #a9b1d6;
     --color-text-light: #c3c7d7;
@@ -414,7 +413,7 @@ a:focus {
 }
 
 @media (prefers-color-scheme: light) {
-  :root.light {
+  :root {
     --color-primary: #005b99;
     --color-text: #2e353f;
     --color-text-light: #4f5969;
@@ -427,4 +426,4 @@ a:focus {
   pre[class*='language-'] {
     filter: invert(0);
   }
-} */
+}
