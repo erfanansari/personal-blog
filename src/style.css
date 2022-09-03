@@ -54,6 +54,24 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
+  color-scheme: light dark;
+}
+
+:root.dark {
+  --color-primary: #2ac3de;
+  --color-text: #a9b1d6;
+  --color-text-light: #c3c7d7;
+  --color-heading: #93b0e9;
+  --color-heading-h1: #fff;
+  --color-accent: #bb9af7;
+  --color-background: #1a1b26;
+}
+:root.dark:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  filter: invert(1);
+}
+
+:root.light {
   --color-primary: #005b99;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
@@ -61,6 +79,10 @@
   --color-heading-h1: #000;
   --color-accent: #d1dce5;
   --color-background: #fff;
+}
+:root.light:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  filter: invert(0);
 }
 
 /* HTML elements */
@@ -373,9 +395,10 @@ a:focus {
     list-style-position: inside;
   }
 }
+
 /*
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root.dark {
     --color-primary: #2ac3de;
     --color-text: #a9b1d6;
     --color-text-light: #c3c7d7;
@@ -388,9 +411,18 @@ a:focus {
   pre[class*='language-'] {
     filter: invert(1);
   }
-} */
-/*
+}
+
 @media (prefers-color-scheme: light) {
+  :root.light {
+    --color-primary: #005b99;
+    --color-text: #2e353f;
+    --color-text-light: #4f5969;
+    --color-heading: #1a202c;
+    --color-heading-h1: #000;
+    --color-accent: #d1dce5;
+    --color-background: #fff;
+  }
   :not(pre) > code[class*='language-'],
   pre[class*='language-'] {
     filter: invert(0);
