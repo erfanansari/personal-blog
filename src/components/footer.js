@@ -25,7 +25,9 @@ const Footer = () => {
         All rights reserved.
       </p>
       <div>
-        <a href={website}>website</a>
+        <a href={website} target="_blank">
+          website
+        </a>
         {' • '}
         <a
           href={`https://github.com/${github || ``}`}
