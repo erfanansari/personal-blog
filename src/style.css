@@ -23,6 +23,7 @@
   --spacing-8: 2rem;
   --spacing-10: 2.5rem;
   --spacing-12: 3rem;
+  --spacing-14: 3.5rem;
   --spacing-16: 4rem;
   --spacing-20: 5rem;
   --spacing-24: 6rem;
@@ -116,19 +117,6 @@ footer {
 
 footer p {
   margin-bottom: 0;
-}
-
-@media screen and (max-width: 500px) {
-  footer {
-    flex-direction: column-reverse;
-    align-items: center;
-    padding-bottom: var(--spacing-0);
-    margin-top: var(--spacing-6);
-  }
-
-  footer p {
-    margin-top: var(--spacing-2);
-  }
 }
 
 hr {
@@ -384,6 +372,38 @@ a:focus {
 }
 
 /* Media queries */
+
+@media screen and (max-width: 350px) {
+  .bio {
+    flex-direction: column;
+  }
+
+  .global-wrapper[data-is-root-path='true'] .bio {
+    margin-bottom: var(--spacing-14);
+  }
+
+  .bio-avatar {
+    margin-right: var(--spacing-0);
+    margin-bottom: var(--spacing-4);
+  }
+
+  .bio-description {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  footer {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-bottom: var(--spacing-0);
+    margin-top: var(--spacing-6);
+  }
+
+  footer p {
+    margin-top: var(--spacing-2);
+  }
+}
 
 @media (max-width: 42rem) {
   blockquote {

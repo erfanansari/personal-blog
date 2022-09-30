@@ -39,7 +39,7 @@ const Bio = () => {
         quality={95}
         alt="Profile picture"
       />
-      <div>
+      <div className="bio-description">
         {author?.name && (
           <p>
             Personal blog by <strong>{author.name}</strong>.
