@@ -1,7 +1,7 @@
 ---
 title: Work in progress...
 date: '2022-05-06T23:46:37.121Z'
-description: 'A road map to learn web3'
+description: 'Coming soon...'
 ---
 
 ## Work in progress...
