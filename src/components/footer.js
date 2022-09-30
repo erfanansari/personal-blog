@@ -25,7 +25,7 @@ const Footer = () => {
         All rights reserved.
       </p>
       <div>
-        <a href={website} target="_blank">
+        <a href={website} target="_blank" rel="noopener noreferrer">
           website
         </a>
         {' • '}
