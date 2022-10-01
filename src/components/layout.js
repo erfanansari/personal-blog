@@ -66,8 +66,8 @@ const Layout = ({ location, title, children }) => {
     changeMode()
   }, [dark, changeMode])
 
-  const offAudio = new Audio(switchOffSound)
-  const onAudio = new Audio(switchOnSound)
+  const offAudio = isBrowser ? new Audio(switchOffSound) : null
+  const onAudio = isBrowser ? new Audio(switchOnSound) : null
 
   const changeTheme = (
     <div className="change-theme-wrapper">
@@ -77,11 +77,11 @@ const Layout = ({ location, title, children }) => {
           setDark(!dark)
           if (isBrowser) {
             localStorage.setItem('theme', dark ? 'light' : 'dark')
-          }
-          if (dark) {
-            onAudio.play()
-          } else {
-            offAudio.play()
+            if (dark) {
+              onAudio.play()
+            } else {
+              offAudio.play()
+            }
           }
         }}
         aria-label={`Activate ${dark ? 'light' : 'dark'} mode`}
