@@ -367,7 +367,6 @@ a:focus {
   background: transparent;
   border: none;
   cursor: pointer;
-  outline: none;
   text-decoration: underline;
   color: var(--color-primary);
 }
