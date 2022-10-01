@@ -16,7 +16,7 @@ const Footer = () => {
     }
   `)
 
-  const { github, telegram, website } = data.site.siteMetadata?.social
+  const { github, telegram, website } = data.site.siteMetadata?.social || {}
 
   return (
     <footer>
@@ -25,7 +25,7 @@ const Footer = () => {
         All rights reserved.
       </p>
       <div>
-        <a href={website} target="_blank" rel="noopener noreferrer">
+        <a href={website} target="_blank" rel="noreferrer">
           website
         </a>
         {' • '}
