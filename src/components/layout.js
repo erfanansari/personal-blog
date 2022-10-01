@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import Footer from './footer'
-import { useState } from 'react'
-import { useLayoutEffect } from 'react'
-import { useCallback } from 'react'
+import { useState, useCallback, useLayoutEffect } from 'react'
+import switchOffSound from '../sounds/switch-off.mp3'
+import switchOnSound from '../sounds/switch-on.mp3'
 
 const colors = {
   light: {
@@ -66,16 +66,26 @@ const Layout = ({ location, title, children }) => {
     changeMode()
   }, [dark, changeMode])
 
+  const offAudio = new Audio(switchOffSound)
+  const onAudio = new Audio(switchOnSound)
+
   const changeTheme = (
     <div className="change-theme-wrapper">
       <button
         id="change-theme"
         onClick={() => {
           setDark(!dark)
-          if (isBrowser) localStorage.setItem('theme', dark ? 'light' : 'dark')
+          if (isBrowser) {
+            localStorage.setItem('theme', dark ? 'light' : 'dark')
+          }
+          if (dark) {
+            onAudio.play()
+          } else {
+            offAudio.play()
+          }
         }}
-        aria-label={`Active ${dark ? 'light' : 'dark'} mode`}
-        title={`Active ${dark ? 'light' : 'dark'} mode`}
+        aria-label={`Activate ${dark ? 'light' : 'dark'} mode`}
+        title={`Activate ${dark ? 'light' : 'dark'} mode`}
       >
         Go {dark ? 'Light' : 'Dark'}
       </button>
