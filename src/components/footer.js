@@ -1,5 +1,5 @@
+import { graphql, useStaticQuery } from 'gatsby'
 import * as React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -7,16 +7,15 @@ const Footer = () => {
       site {
         siteMetadata {
           social {
+            twitter
             github
-            telegram
-            website
           }
         }
       }
     }
   `)
 
-  const { github, telegram, website } = data.site.siteMetadata?.social || {}
+  const { twitter, github } = data.site.siteMetadata?.social || {}
 
   return (
     <footer>
@@ -25,24 +24,20 @@ const Footer = () => {
         All rights reserved.
       </p>
       <div>
-        <a href={website} target="_blank" rel="noreferrer">
-          website
+        <a
+          href={`https://twitter.com/${twitter}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          twitter
         </a>
         {' • '}
         <a
-          href={`https://github.com/${github || ``}`}
+          href={`https://github.com/${github}`}
           target="_blank"
           rel="noopener noreferrer"
         >
           github
-        </a>
-        {' • '}
-        <a
-          href={`https://t.me/${telegram || ``}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          telegram
         </a>
       </div>
     </footer>
