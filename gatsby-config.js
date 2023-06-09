@@ -8,9 +8,9 @@ module.exports = {
     description: `Here I share my thoughts and experiences.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
-      twitter: `eansarimehr`,
+      twitter: `erfananm`,
       github: `erfanansari`,
-      telegram: `eansarimehr`,
+      telegram: `erfananm`,
       website: `https://erfanansari.me`,
     },
   },
